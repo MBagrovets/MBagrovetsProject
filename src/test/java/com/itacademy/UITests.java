@@ -23,9 +23,7 @@ public class UITests extends BaseTest{
         homePage.clickFindElementBtn();
         Thread.sleep(3000);
         List<String> results = homePage.getResults();
-        Assert.assertTrue(results.contains(fieldName), "Search doesn't work");
-        Thread.sleep(2000);
-        LOGGER.info("info");
+        Assert.assertTrue(results.contains(fieldName.toLowerCase()), results + " doesn't have " + fieldName);
     }
 
     @Test
@@ -40,7 +38,6 @@ public class UITests extends BaseTest{
         loginPage.clickSignInBtn();
         String actualEmailErrorText = loginPage.getRedError().getText();
         Assert.assertEquals(emailErrorText, actualEmailErrorText);
-        LOGGER.info("info");
     }
 
     @Test
@@ -57,7 +54,6 @@ public class UITests extends BaseTest{
         loginPage.clickSignInBtn();
         String actualEmailErrorText = loginPage.getRedError().getText();
         Assert.assertEquals(passwordErrorText, actualEmailErrorText);
-        LOGGER.info("info");
     }
 
     @Test
@@ -78,6 +74,5 @@ public class UITests extends BaseTest{
         Thread.sleep(2000);
         String actualCredentialsError = loginPage.getRedError().getText();
         Assert.assertEquals(expectedCredentialsErrorText, actualCredentialsError);
-        LOGGER.info("info");
     }
 }
