@@ -2,17 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name = "MySuite" thread-count="2" parallel="tests">
-    <!--<listeners>
-        <listener class-name="com.itacademy.utils.retry.AnnotationTransformer"/>
-    </listeners>-->
     <test name = "UI">
         <classes>
             <class name = "com.itacademy.UITests"></class>
-        </classes>
-    </test>
-    <test name = "API">
-        <classes>
-            <class name = "com.itacademy.APITests"></class>
         </classes>
     </test>
 </suite>

@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class UITests extends BaseTest{
+public class UITests extends UIBaseTest {
 
-    private static final Logger LOGGER = LogManager.getLogger(LoggerTest.class);
+    private static final Logger LOGGER = LogManager.getLogger(UITests.class);
 
     @Test
     public void test1searchBook() throws InterruptedException {

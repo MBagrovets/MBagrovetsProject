@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
 @Listeners(LocalListener.class)
-public class BaseTest {
+public class UIBaseTest {
 
     protected static WebDriver driver;
 
