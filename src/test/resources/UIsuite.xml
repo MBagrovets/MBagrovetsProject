@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name = "MySuite" thread-count="2" parallel="tests">
+<suite name = "UISuite" thread-count="2" parallel="tests">
     <test name = "UI">
         <classes>
             <class name = "com.itacademy.UITests"></class>
