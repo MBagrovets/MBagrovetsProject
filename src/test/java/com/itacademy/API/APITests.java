@@ -60,5 +60,6 @@ public class APITests extends APIBaseTest{
                 .body("id_delivery=&id_payment=&payFromCashbackAccount=0&maxAllowedBonusAmountWriteOff=0&hpid=1c275cbb7488393001c28aeba31a47d9_6f42e7e940633f36ac3b52679862fe78&phone=&promo-code=&item%5B%5D=10407993&sale%5B10407993%5D=18947&quantity%5B10407993%5D=1&checkAll=on")
                 .when().post("checkout/goods.php?goods")
                 .then().log().all().statusCode(200).log().all();
+
     }
 }
