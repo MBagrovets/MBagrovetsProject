@@ -47,5 +47,4 @@ public class LoginPage {
     public WebElement getEmailField(){
         return emailField;
     }
-
 }

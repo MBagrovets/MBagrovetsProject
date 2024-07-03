@@ -25,13 +25,10 @@ public class HomePage {
     private WebElement LoginPageBtn;
 
 
-
-
     public HomePage(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
-
 
     public void typeSearchBox(String text){
         searchBox.click();
@@ -49,5 +46,4 @@ public class HomePage {
     public void clickLoginPageBtn(){
         LoginPageBtn.click();
     }
-
 }

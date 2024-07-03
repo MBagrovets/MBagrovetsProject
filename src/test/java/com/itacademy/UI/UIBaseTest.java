@@ -1,4 +1,4 @@
-package com.itacademy;
+package com.itacademy.UI;
 
 import com.itacademy.listeners.LocalListener;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +13,7 @@ public class UIBaseTest {
     protected static WebDriver driver;
 
     @BeforeMethod
-
-    public static void setUp() {
+    public static void UISetUp() {
         System.setProperty("webdriver.chrome.driver", "C:/SeleniumServer/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get ("https://oz.by/");

@@ -1,4 +1,4 @@
-package com.itacademy;
+package com.itacademy.UI;
 
 import com.itacademy.pages.HomePage;
 import com.itacademy.pages.LoginPage;
@@ -14,7 +14,7 @@ public class UITests extends UIBaseTest {
     private static final Logger LOGGER = LogManager.getLogger(UITests.class);
 
     @Test
-    public void test1searchBook() throws InterruptedException {
+    public void searchBookTest() throws InterruptedException {
 
         String fieldName = "философия Java";
         HomePage homePage = new HomePage(driver);
@@ -27,7 +27,7 @@ public class UITests extends UIBaseTest {
     }
 
     @Test
-    public void test2loginEmailError() throws InterruptedException {
+    public void loginEmailErrorTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String emailErrorText = "Введите адрес электронной почты";
@@ -41,7 +41,7 @@ public class UITests extends UIBaseTest {
     }
 
     @Test
-    public void test3loginPasswordError() throws InterruptedException {
+    public void loginPasswordErrorTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String myEmail = "123@gmail.com";
@@ -57,7 +57,7 @@ public class UITests extends UIBaseTest {
     }
 
     @Test
-    public void test4wrongCredentials() throws InterruptedException {
+    public void wrongCredentialsTest() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String wrongEmail = "w@gmail.com";
@@ -68,7 +68,7 @@ public class UITests extends UIBaseTest {
         Thread.sleep(3000);
         loginPage.clickEmailTab();
         loginPage.getEmailField().sendKeys(wrongEmail);
-        loginPage.getPasswordField().click();                          //не могу собрать в один метод, т.к. click->sendkeys
+        loginPage.getPasswordField().click();
         loginPage.getPasswordField().sendKeys(wrongPassword);
         loginPage.clickSignInBtn();
         Thread.sleep(2000);

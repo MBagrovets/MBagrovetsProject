@@ -4,7 +4,7 @@
 <suite name = "APISuite" thread-count="2" parallel="tests">
     <test name = "API">
         <classes>
-            <class name = "com.itacademy.APITests"></class>
+            <class name = "com.itacademy.API.APITests"></class>
         </classes>
     </test>
 </suite>
