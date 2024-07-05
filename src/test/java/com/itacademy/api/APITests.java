@@ -1,4 +1,4 @@
-package com.itacademy.API;
+package com.itacademy.api;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -28,11 +28,7 @@ public class APITests extends APIBaseTest{
         Document document = Jsoup.parse(html);
 
         Elements bookElements = document.select(".link.product-card__link");
-        Assert.assertTrue(bookElements != null && !bookElements.isEmpty(), "The list of book elements should not be empty");
-
-        for (Element bookElement : bookElements) {
-            LOGGER.info(bookElement.text());
-        }
+        Assert.assertFalse(bookElements.isEmpty(), "The list of book elements should not be empty");
     }
 
     @Test

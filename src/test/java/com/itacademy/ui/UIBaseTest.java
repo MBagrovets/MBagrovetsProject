@@ -1,4 +1,4 @@
-package com.itacademy.UI;
+package com.itacademy.ui;
 
 import com.itacademy.listeners.LocalListener;
 import org.openqa.selenium.WebDriver;

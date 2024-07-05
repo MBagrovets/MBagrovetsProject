@@ -4,7 +4,7 @@
 <suite name = "UISuite" thread-count="2" parallel="tests">
     <test name = "UI">
         <classes>
-            <class name = "com.itacademy.UI.UITests"></class>
+            <class name = "com.itacademy.ui.UITests"></class>
         </classes>
     </test>
 </suite>

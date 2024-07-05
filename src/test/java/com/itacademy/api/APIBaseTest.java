@@ -1,4 +1,4 @@
-package com.itacademy.API;
+package com.itacademy.api;
 
 import com.itacademy.listeners.LocalListener;
 import io.restassured.RestAssured;

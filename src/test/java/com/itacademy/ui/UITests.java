@@ -1,7 +1,8 @@
-package com.itacademy.UI;
+package com.itacademy.ui;
 
 import com.itacademy.pages.HomePage;
 import com.itacademy.pages.LoginPage;
+import com.itacademy.utils.Waiters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
@@ -14,26 +15,26 @@ public class UITests extends UIBaseTest {
     private static final Logger LOGGER = LogManager.getLogger(UITests.class);
 
     @Test
-    public void searchBookTest() throws InterruptedException {
+    public void searchBookTest(){
 
         String fieldName = "философия Java";
         HomePage homePage = new HomePage(driver);
 
         homePage.typeSearchBox(fieldName.toLowerCase());
         homePage.clickFindElementBtn();
-        Thread.sleep(3000);
+        Waiters.wait(3000);
         List<String> results = homePage.getResults();
         Assert.assertTrue(results.contains(fieldName.toLowerCase()), results + " doesn't have " + fieldName);
     }
 
     @Test
-    public void loginEmailErrorTest() throws InterruptedException {
+    public void loginEmailErrorTest(){
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String emailErrorText = "Введите адрес электронной почты";
 
         homePage.clickLoginPageBtn();
-        Thread.sleep(3000);
+        Waiters.wait(3000);
         loginPage.clickEmailTab();
         loginPage.clickSignInBtn();
         String actualEmailErrorText = loginPage.getRedError().getText();
@@ -41,14 +42,14 @@ public class UITests extends UIBaseTest {
     }
 
     @Test
-    public void loginPasswordErrorTest() throws InterruptedException {
+    public void loginPasswordErrorTest(){
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String myEmail = "123@gmail.com";
         String passwordErrorText = "Введите пароль";
 
         homePage.clickLoginPageBtn();
-        Thread.sleep(3000);
+        Waiters.wait(3000);
         loginPage.clickEmailTab();
         loginPage.getEmailField().sendKeys(myEmail);
         loginPage.clickSignInBtn();
@@ -57,7 +58,7 @@ public class UITests extends UIBaseTest {
     }
 
     @Test
-    public void wrongCredentialsTest() throws InterruptedException {
+    public void wrongCredentialsTest(){
         HomePage homePage = new HomePage(driver);
         LoginPage loginPage = new LoginPage(driver);
         String wrongEmail = "w@gmail.com";
@@ -65,13 +66,13 @@ public class UITests extends UIBaseTest {
         String expectedCredentialsErrorText = "Адрес электронной почты не зарегистрирован. Зарегистрироваться";
 
         homePage.clickLoginPageBtn();
-        Thread.sleep(3000);
+        Waiters.wait(3000);
         loginPage.clickEmailTab();
         loginPage.getEmailField().sendKeys(wrongEmail);
         loginPage.getPasswordField().click();
         loginPage.getPasswordField().sendKeys(wrongPassword);
         loginPage.clickSignInBtn();
-        Thread.sleep(2000);
+        Waiters.wait(3000);
         String actualCredentialsError = loginPage.getRedError().getText();
         Assert.assertEquals(expectedCredentialsErrorText, actualCredentialsError);
     }
