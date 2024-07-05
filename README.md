@@ -26,5 +26,4 @@ Content:
 9. APIsuite** - .xml file for API tests.
 10. UIsuite** - .xml file for UI tests.
 
-
     - 11. - allure.properties - for using Allure Report.
