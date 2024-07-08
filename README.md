@@ -15,7 +15,7 @@ Content:
 4. TakeScreenshotUtil - class for the method that is used to take screenshots.
 5. Waiters - class for the method that is used to take Waiters.
   - resources:
-6. log4j2.properties** - for using Loggers.
+6. log4j2.properties - for using Loggers.
  
 **test:**
   - API package:
@@ -27,5 +27,6 @@ Content:
   - resources:
     a - testsuites package:
 11. APIsuite - .xml file for API tests.
-12. UIsuite - .xml file for UI tests.
-    b -  13. - allure.properties - file for using Allure Report.
+12. UIsuite - .xml file for UI tests. 
+
+b -  13. - allure.properties - file for using Allure Report.
