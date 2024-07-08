@@ -5,25 +5,27 @@ Description:
 This project contains a set of automated tests written in Java for testing a web application. The tests use **TestNG** for test management, **RestAssured** framework for API testing, and **Selenium WebDriver** for UI testing.
 
 Content:
-- **src:**
+**main:**
   - listeners package:
 1. LocalListener - class for Listeners that use Loggers.
   - pages package:
 2. HomePage - class for Page Factory, locators on the current page and for their methods and constructors.
 3. LoginPage - class for Page Factory, locators on the current page and for their methods and constructors.
+   - utils:
+4. TakeScreenshotUtil - class for the method that is used to take screenshots.
+5. Waiters - class for the method that is used to take Waiters.
   - resources:
-4. log4j2.properties** - for using Loggers.
+6. log4j2.properties** - for using Loggers.
  
-- **test:**
+**test:**
   - API package:
-5. APIBaseTest - base test for APITests. Contains Before Method.
-6. APITest - for API Tests.
+7. APIBaseTest - base test for APITests. Contains Before Method.
+8. APITest - for API Tests.
   - UI package:
-7. UIBaseTest** - base test for UITests. Contains Before and After Methods.
-8. UITest** - for UI Tests.
+9. UIBaseTest - base test for UITests. Contains Before and After Methods.
+10. UITest - for UI Tests.
   - resources:
-    - testsuites package:
-9. APIsuite** - .xml file for API tests.
-10. UIsuite** - .xml file for UI tests.
-
-    - 11. - allure.properties - for using Allure Report.
+    a - testsuites package:
+11. APIsuite - .xml file for API tests.
+12. UIsuite - .xml file for UI tests.
+    b -  13. - allure.properties - file for using Allure Report.
