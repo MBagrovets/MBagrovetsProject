@@ -2,6 +2,7 @@ package com.itacademy.ui;
 
 import com.itacademy.pages.HomePage;
 import com.itacademy.pages.LoginPage;
+import com.itacademy.utils.TakeScreenshotUtil;
 import com.itacademy.utils.Waiters;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
